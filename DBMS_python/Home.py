@@ -16,7 +16,7 @@ class Home:
         # self.photo.grid(row=0, column=0)
 
         self.root.title('Home')
-        self.root.iconbitmap('C:\\Users\\Shreyas\\PycharmProjects\\DBMS_python\\Images\\Admin2.ico')
+        #self.root.iconbitmap('C:\\Users\\Shreyas\\PycharmProjects\\DBMS_python\\Images\\Admin2.ico')
         self.root.geometry('700x600')
         self.frame = tk.Frame(self.root)
         self.frame.place(relx=0.5, rely=0.5, anchor="center")
@@ -217,7 +217,7 @@ class login:
         self.root = root
         self.root.config(background='White')
         self.root.title('Admin Login')
-        self.root.iconbitmap('C:\\Users\\Shreyas\\PycharmProjects\\DBMS_python\\Images\\Admin2.ico')
+        #self.root.iconbitmap('C:\\Users\\Shreyas\\PycharmProjects\\DBMS_python\\Images\\Admin2.ico')
         self.root.geometry('700x600')
         self.frame = tk.Frame(self.root)
         self.frame.place(relx=0.5, rely=0.5, anchor="center")
@@ -279,7 +279,7 @@ class Records:
     def __init__(self, root):
         self.root = root
         self.root.title('Insert Profile')
-        self.root.iconbitmap('C:\\Users\\Shreyas\\PycharmProjects\\DBMS_python\\Images\\Admin2.ico')
+        #self.root.iconbitmap('C:\\Users\\Shreyas\\PycharmProjects\\DBMS_python\\Images\\Admin2.ico')
         self.root.geometry('700x600')
         self.frame = tk.Frame(self.root)
         self.frame.place(relx=0.5, rely=0.5, anchor="center")
@@ -400,7 +400,7 @@ class StuRec:
         else:
             conn = ms.connect(host='localhost', user='root', passwd='Shrey@145', database='sams')
             c = conn.cursor()
-            sql = "Insert into student(USN, S_Name, S_Phone, S_Email, S_Address, User_id) values (%s,%s,%s,%s,%s,%s)"
+            sql = "Insert into student(USN, S_Name, S_Phone, S_Email, S_Address) values (%s,%s,%s,%s,%s)"
             c.execute(sql, self.records)
             conn.commit()
             c.close()
