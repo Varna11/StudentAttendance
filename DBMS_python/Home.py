@@ -22,13 +22,13 @@ class Home:
         self.frame.place(relx=0.5, rely=0.5, anchor="center")
 
         #Buttons
-        self.Admin_btn = tk.Button(self.frame, text="Admin Access", command=self.Admin)
+        self.Admin_btn = tk.Button(self.frame, text="Admin", command=self.Admin)
         self.Admin_btn.grid(row=0,column=1, columnspan=2)
 
-        self.Faculty_btn = tk.Button(self.frame, text="Faculty Access", command=self.Faculty)
+        self.Faculty_btn = tk.Button(self.frame, text="Faculty", command=self.Faculty)
         self.Faculty_btn.grid(row=1, column=1, columnspan=2)
 
-        self.Student_btn = tk.Button(self.frame, text="Student Access", command=self.Student)
+        self.Student_btn = tk.Button(self.frame, text="Student", command=self.Student)
         self.Student_btn.grid(row=2,column=1, columnspan=2)
 
     def Admin(self):
@@ -230,12 +230,12 @@ class login:
         # Labels
         self.username_label = tk.Label(self.frame, text="Username:", font=('Helvetica', 15), bg='white')
         self.username_label.grid(row=4, column=0)
-        self.username = tk.Entry(self.frame,bg='grey')
+        self.username = tk.Entry(self.frame,bg='white')
         self.username.grid(row=5, column=0, columnspan=2)
 
         self.password_label = tk.Label(self.frame, text="Password:", font=('Helvetica', 15), bg='white')
         self.password_label.grid(row=6, column=0)
-        self.password = tk.Entry(self.frame, bg='grey')
+        self.password = tk.Entry(self.frame, bg='white')
         self.password.grid(row=7, column=0, columnspan=2)
         self.password.config(show="*")
 
