@@ -31,18 +31,9 @@ class Home:
                                      font=("Comic sans", 12, "bold"), command=self.Student)
         self.Student_btn.grid(row=0, column=2, padx=20)
 
-        # Buttons
-        self.Admin_btn = tk.Button(self.frame, width="20", height="2", bg="light blue", font=("Comic sans", 20, "bold"),
-                                   text="Admin", command=self.Admin)
-        self.Admin_btn.grid(row=0, column=0, padx=20)
-
-        self.Faculty_btn = tk.Button(self.frame, width="20", height="2", bg="light blue", text="Faculty",
-                                     font=("Comic sans", 20, "bold"), command=self.Faculty)
-        self.Faculty_btn.grid(row=0, column=1, padx=20)
-
-        self.Student_btn = tk.Button(self.frame, width="20", height="2", bg="light blue", text="Student",
-                                     font=("Comic sans", 20, "bold"), command=self.Student)
-        self.Student_btn.grid(row=0, column=2, padx=20)
+        self.Exit_btn = tk.Button(self.frame, width="20", height="2", bg="light blue", text="Exit",
+                                     font=("Comic sans", 12, "bold"), command=self.Exit)
+        self.Exit_btn.grid(row=1, column=1, pady=20)
 
     def Admin(self):
         self.frame.destroy()
@@ -55,6 +46,9 @@ class Home:
     def Student(self):
         self.frame.destroy()
         self.another = ViewAtt(self.root)
+
+    def Exit(self):
+        self.root.destroy()
 
 
 class Attendance:
